@@ -2,7 +2,7 @@
   description = "Rust toolchains and rust analyzer nightly for nix";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:loongson-community/nixpkgs/loong-master";
     rust-analyzer-src = {
       url = "github:rust-lang/rust-analyzer/nightly";
       flake = false;
@@ -29,6 +29,7 @@
         "i686-linux"
         "x86_64-darwin"
         "x86_64-linux"
+        "loongarch64-linux"
       ];
 
       attrDerivations = set: path: (concatMapAttrs
